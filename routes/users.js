@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const pool = require('../models/db')
+const {pool, query} = require('../models/db')
 
 router.get('/', function (req, res, next) {
   const sql = 'SELECT * FROM links';
 
-  pool.query(sql, function (err, result, fields) {
-    if (err) throw err;
+  query(sql, function (err, result, fields) {
     res.json({
       status: 200,
       result
@@ -17,8 +16,7 @@ router.get('/', function (req, res, next) {
 router.get('/:id', function (req, res, next) {
   const sql = 'SELECT * FROM links WHERE id = ?';
 
-  pool.query(sql, [req.params.id], function (err, result, fields) {
-    if (err) throw err;
+  query(sql, [req.params.id], function (err, result, fields) {
     res.json({
       status: 200,
       id: req.params.id,

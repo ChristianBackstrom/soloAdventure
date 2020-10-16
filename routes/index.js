@@ -1,31 +1,45 @@
-var express = require('express')
-const { render } = require('../app');
+var express = require('express');
 var router = express.Router();
-const pool = require('../models/db');
+const {pool, query} = require('../models/db');
 
-router.get('/', function (req, res, next) {
-  const sql = 'SELECT * FROM story';
+router.get('/', async function (req, res, next) {
+  try {
+    const story = await query(
+      'SELECT * FROM story WHERE id = ?',
+      req.params.id
+    );
 
-  pool.query(sql, function (err, result, fields) {
-    if (err) throw err;
-    res.json({
-      status: 200,
-      result
-    });
-  });
-});
-
-router.get('/:id', function (req, res, next) {
-  const sql = 'SELECT * FROM story WHERE id = ?';
-
-  pool.query(sql, [req.params.id], function (err, result, fields) {
-    if (err) throw err;
-    res.json({
-      status: 200,
+    res.render('index', {
       id: req.params.id,
-      result: result
+      story: story
     });
-  });
-});
+  } catch (e) {
+    console.error(e);
+    next(e);
+  };
+})
 
-module.exports = router
+router.get('/:id', async function (req, res, next) {
+  try {
+    const story = await query(
+      'SELECT * FROM story WHERE id = ?',
+      req.params.id
+    );
+
+    const links = await query(
+      'SELECT * FROM links WHERE story_id = ?',
+      req.params.id
+    );
+
+    res.json({
+      id: req.params.id,
+      story: story,
+      links: links
+    });
+  } catch (e) {
+    console.error(e);
+    next(e);
+  };
+})
+
+module.exports = router;
