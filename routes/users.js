@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const pool = require('../models/db');
+const pool = require('../models/db')
 
 router.get('/', function (req, res, next) {
   const sql = 'SELECT * FROM links';
