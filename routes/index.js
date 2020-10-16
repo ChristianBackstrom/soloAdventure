@@ -1,19 +1,19 @@
 var express = require('express')
-const { render } = require('../app')
-var router = express.Router()
-const pool = require('../models/db')
+const { render } = require('../app');
+var router = express.Router();
+const pool = require('../models/db');
 
 router.get('/', function (req, res, next) {
-  const sql = 'SELECT * FROM story'
+  const sql = 'SELECT * FROM story';
 
   pool.query(sql, function (err, result, fields) {
-    if (err) throw err
+    if (err) throw err;
     res.json({
       status: 200,
       result
-    })
-  })
-})
+    });
+  });
+});
 
 router.get('/:id', function (req, res, next) {
   const sql = 'SELECT * FROM story WHERE id = ?';
