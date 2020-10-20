@@ -5,13 +5,11 @@ const {pool, query} = require('../models/db');
 router.get('/', async function (req, res, next) {
   try {
     const story = await query(
-      'SELECT * FROM story WHERE id = ?',
-      req.params.id
+      'SELECT * FROM story where id = 1',
     );
 
     res.render('index', {
-      id: req.params.id,
-      story: story
+      story
     });
   } catch (e) {
     console.error(e);
@@ -26,15 +24,9 @@ router.get('/:id', async function (req, res, next) {
       req.params.id
     );
 
-    const links = await query(
-      'SELECT * FROM links WHERE story_id = ?',
-      req.params.id
-    );
-
-    res.json({
+    res.render('index', {
       id: req.params.id,
-      story: story,
-      links: links
+      story: story
     });
   } catch (e) {
     console.error(e);
