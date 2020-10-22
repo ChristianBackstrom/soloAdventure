@@ -8,8 +8,13 @@ router.get('/', async function (req, res, next) {
       'SELECT * FROM story where id = 1',
     );
 
+    const links = await query (
+      'SELECT * FROM story where links story_id = 1'
+    );
+
     res.render('index', {
-      story
+      story,
+      links
     });
   } catch (e) {
     console.error(e);
@@ -24,9 +29,15 @@ router.get('/:id', async function (req, res, next) {
       req.params.id
     );
 
+    const links = await query(
+      'SELECT * FROM links WHERE story_id = ?',
+      req.params.id
+    )
+
     res.render('index', {
       id: req.params.id,
-      story: story
+      story: story,
+      links: links
     });
   } catch (e) {
     console.error(e);
