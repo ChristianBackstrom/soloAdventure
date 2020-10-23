@@ -2,7 +2,16 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
+.bg-body {
+  background-color: #8cffcd; }
+
 a {
   color: #00B7FF; }
+
+.bg-lightG {
+  background-color: #99ff99; }
+
+.bg-DlightG {
+  background-color: #66ff66; }
 
 /*# sourceMappingURL=style.css.map */

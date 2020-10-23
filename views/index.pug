@@ -2,10 +2,12 @@ extends layout
 
 block content
     body
-        .container
-            p= story[0].body
+        .container.bg-DlightG.pb-2
+            .box
+                p.text-center= story[0].body
 
 
-        each link in links
-            button.btn.btn-secondary.btn-lg.btn-block(type='button', href= link.target_id) 
-                p= link.description
+            each link in links
+                a(href= link.target_id)
+                    button.btn.btn-secondary.btn-lg.btn-block.m-1(type='button') 
+                        p= link.description

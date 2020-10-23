@@ -9,12 +9,12 @@ router.get('/', async function (req, res, next) {
     );
 
     const links = await query (
-      'SELECT * FROM story where links story_id = 1'
+      'SELECT * FROM links where story_id = 1'
     );
 
     res.render('index', {
-      story,
-      links
+      story: story,
+      links: links
     });
   } catch (e) {
     console.error(e);
