@@ -38,7 +38,7 @@ CREATE TABLE `links` (
 
 LOCK TABLES `links` WRITE;
 /*!40000 ALTER TABLE `links` DISABLE KEYS */;
-INSERT INTO `links` VALUES (5,'Du är de tre bockarna som en kollektiv intelligens.',2,1),(6,'Du är trollet som bor udner bron.',3,1),(7,'Du skickar över endast en bock',4,4),(8,'Du skickar över alla bockar',7,4),(9,'de andra bockarna kommer rusande',5,4),(10,'de inväntar troll',6,5),(11,'de inväntar skricket',8,6),(12,'de hör ett skrick under bron',8,7),(13,'du säger åt trollet att berätta gåtan',9,8),(14,'du struntar i vad trollet har att säga!',10,8),(15,'du lyssnar på gåtan',11,9),(16,'du har fel',12,13),(17,'du har fel',12,14),(18,'du har fel',12,15),(19,'Du har rätt',17,16),(20,'Du går över bron',NULL,18),(21,'Du tar över trollet och går sedan över bron',NULL,19);
+INSERT INTO `links` VALUES (5,'Du är de tre bockarna som en kollektiv intelligens.',2,1),(6,'Du är trollet som bor under bron.',3,1),(7,'Du skickar över endast en bock',4,4),(8,'Du skickar över alla bockar',7,4),(9,'de andra bockarna kommer rusande',5,4),(10,'de inväntar troll',6,5),(11,'de inväntar skricket',8,6),(12,'de hör ett skrick under bron',8,7),(13,'du säger åt trollet att berätta gåtan',9,8),(14,'du struntar i vad trollet har att säga!',10,8),(15,'du lyssnar på gåtan',11,9),(16,'du har fel',12,13),(17,'du har fel',12,14),(18,'du har fel',12,15),(19,'Du har rätt',17,16),(20,'Du går över bron',NULL,18),(21,'Du tar över trollet och går sedan över bron',NULL,19);
 /*!40000 ALTER TABLE `links` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,4 +75,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-22  9:07:31
+-- Dump completed on 2020-10-23  8:38:07

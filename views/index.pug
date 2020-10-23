@@ -1,7 +1,11 @@
 extends layout
 
 block content
-  p= story.body
-  
-  each link in links
-    p= link.description
+    body
+        .container
+            p= story[0].body
+
+
+        each link in links
+            button.btn.btn-secondary.btn-lg.btn-block(type='button', href= link.target_id) 
+                p= link.description
