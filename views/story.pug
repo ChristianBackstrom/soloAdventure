@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    body
+            .container.mb-3
+              h1.text-white.text-center.mb-0= "De tre Bockarna Bruse"
+
+            .container.pb-2
+                .box.m-5
+                    h5.text-white.text-center= story[0].body
+
+
+                each link in links
+                    a(href= story/link.target_id).text-decoration-none
+                        button.shadow.btn.btn-secondary.btn-lg.btn-block.m-1.btn-primary(type='button')= link.description
