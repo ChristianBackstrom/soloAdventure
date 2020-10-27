@@ -6,11 +6,10 @@ block content
               h1.text-white.text-center.mb-0= "De tre Bockarna Bruse"
 
             .container.pb-2
-                .box
-                    p.text-white.text-center= story[0].body
+                .box.m-5
+                    h5.text-white.text-center= story[0].body
 
 
                 each link in links
                     a(href= link.target_id).text-decoration-none
-                        button.btn.btn-secondary.btn-lg.btn-block.m-1.bg-#70CCA4(type='button') 
-                            p= link.description
+                        button.btn.btn-secondary.btn-lg.btn-block.m-1.btn-primary(type='button')= link.description
