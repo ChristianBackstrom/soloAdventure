@@ -3,15 +3,21 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 .bg-body {
-  background-color: #8cffcd; }
+  background-color: #6C8077; }
 
 a {
   color: #00B7FF; }
 
 .bg-lightG {
-  background-color: #99ff99; }
+  background-color: #8CFFCD; }
 
 .bg-DlightG {
-  background-color: #66ff66; }
+  background-color: #8CFFCD; }
+
+.bg-d9 {
+  background-color: #D9FFEE; }
+
+.bg-#70CCA4 {
+  background-color: #70CCA4; }
 
 /*# sourceMappingURL=style.css.map */
