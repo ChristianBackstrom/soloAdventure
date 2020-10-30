@@ -12,7 +12,7 @@ router.get('/', async function (req, res, next) {
       'SELECT * FROM links where story_id = 1'
     );
 
-    res.render('story', {
+    res.render('index', {
       story: story,
       links: links
     });

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const {pool, query} = require('../models/db');
 
-router.get('/story', async function (req, res, next) {
+router.get('/', async function (req, res, next) {
   try {
     const story = await query(
       'SELECT * FROM story where id = 1',
@@ -22,7 +22,7 @@ router.get('/story', async function (req, res, next) {
   };
 })
 
-router.get('/story/:id', async function (req, res, next) {
+router.get('/:id', async function (req, res, next) {
   try {
     const story = await query(
       'SELECT * FROM story WHERE id = ?',
