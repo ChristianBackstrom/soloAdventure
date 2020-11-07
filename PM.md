@@ -1,0 +1,14 @@
+#Post Mortem(swedish)#
+
+ChristianBackstrom
+
+
+Det här är ett spel med inrikting som en interaktiv saga. Det är De tre Bockarna Bruse med lite ändringar för att införa val i sagan. Den har flera slut och är även lite ändrad i handlingen. Det stora med detta projekt var att jag använde mig av en databas för att kunna få fram sagan och de olika valen man skulle göra. Jag började med att göra ett diagram för hur sagan skulle spelas ut och de olika valen som skulle vara för att jag skulle kunna veta vars i databasen man ska använda de. Sedan började jag med att få till för att de skulle kunna visas på sidan, för att sedan kunna designa och finslipa sidan eftersom det måste passa in med temat.
+
+I detta projekt har jag använt mig av tableplus, pug, sass, javascript och bootstrap. Jag använde mig av tableplus och javascript för att lätt kunna sätta in hela min saga och de olika valen i en databas enkelt med tableplus. Javascript använde jag för att kunna visa upp bestämda delar av databasen för att rätt val visas samtidigt med rätt del av sagan. pug, sass och bootstrap har jag använt mig av för att göra designen på sidan. Bootstrap har jag använt för att få en grund layout på sidan som jag senare med sass ändrar på för att få sidan mer personlig och kunna passa in mer med temat på hela sidan. Jag har använt mig av pug för att kunna visa upp lättare delar från databasen och kunna använda iterationer lätt med det för när det är olika mängder val. Min planering började med att jag gjorde ett diagram över hur sagan skulle spelas ut och vilka val som skulle göras. Sedan efter det var planen att jag skulle fixa för att alla de olika valen och sagan skulle visas upp korrekt på sidan för att sedan börja designa sidan.
+
+Det som har gått väldigt bra i mitt projekt var att få in allt i databasen och förstå hur jag skulle få ut det till sidan. Det gick bra för att vi flera gånger hade gått igenom det och jag själv tyckte att det var rätt tydligt och enkelt eftersom vi fick en färdig router och sätt att renderera det på sidan.
+
+Dock tycker jag att detta med att göra routerna för att kunna göra sub länkar till sidan. Jag fick sitta och googla och även kolla igenom kursboken min lärare har fixat åt oss. Detta kan jag undvika i framtiden genom att fråga under lektionstid hur det är jag kan göra en ny router. Jag lyckades själv att lösa detta men det tog en bra stund innan det gick.
+
+Jag tycker att detta proejtk har gått bra och jag har lärt mig mycket om hur backend fungerar och hur jag kommer att kunna använda mig av det i framtiden. Jag tycker dock att jag kunde ha lagt mer tid på designen för att passa sagan lite mer och göra den lite livligare då den ska vara riktad mot barn. Jag själv måste lära mig att fråga mer under lektion och ha lite mer av en plan över vad det är jag vill göra under ett projekt som detta för att inte behöva sitta och leta och söka i sista stund efter en lösning på ett problem.
